@@ -13,7 +13,7 @@ make install
 ```
 Open:
 ```
-[make install](https://localhost)
+https://localhost
 ```
 Fill the table with test data:
 ```
