@@ -1,4 +1,4 @@
-install: build-images set-up update-db ## Install project
+install: build-images set-up ## Install project
 fill: fill-table ## Fill out table A
 send: add-user set-administrator set-permissions send-data start-worker ## Send table A to table B
 
