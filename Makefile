@@ -27,4 +27,4 @@ set-administrator:
 	docker-compose --env-file .env -f compose.yaml -f compose.override.yaml exec rabbitmq bash -c "rabbitmqctl set_user_tags myuser administrator"
 
 set-permissions:
-	docker-compose --env-file .env -f compose.yaml -f compose.override.yaml exec rabbitmq bash -c "rabbitmqctl set_permissions -p / myuser ".*" ".*" ".*""
+	docker-compose --env-file .env -f compose.yaml -f compose.override.yaml exec rabbitmq bash -c 'rabbitmqctl set_permissions -p / myuser ".*" ".*" ".*"'
