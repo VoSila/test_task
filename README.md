@@ -11,12 +11,14 @@ Install and start app:
 ```
 make install
 ```
-
+Open:
+```
+[make install](https://localhost)
+```
 Fill the table with test data:
 ```
 make fill
 ```
-
 Send a table to another table:
 ```
 make send
