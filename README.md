@@ -11,6 +11,10 @@ Install and start app:
 ```
 make install
 ```
+Update db:
+```
+make update-db
+```
 Open:
 ```
 https://localhost
