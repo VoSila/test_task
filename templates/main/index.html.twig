@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test task{% endblock %}
+
+{% block body %}
+
+    <a type="button" class="btn btn-primary btn-lg btn-block" href="{{ path('app_table_a') }}">Table A</a>
+    <a type="button" class="btn btn-primary btn-lg btn-block" href="{{ path('app_table_b') }}">Table B</a>
+    <a type="button" class="btn btn-primary btn-lg btn-block" href="{{ path('admin') }}">Admin panel</a>
+
+{% endblock %}

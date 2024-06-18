@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ action }}{% endblock %}
+
+{% block body %}
+    <a type="button" class="btn btn-primary btn-lg btn-block" href="{{ path('app_table_b') }}">Get table B</a>
+    <div class="container mt-5" style="margin-top: 50px; padding: 30px 100px 30px 100px">
+        <div class="row">
+            <h1>{{ action }}</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                    </tr>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in pagination %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.surname }}</td>
+                            <td>{{ item.email }}</td>
+                            <td>{{ item.type }}</td>
+                            <td>{{ item.description }}</td>
+                            <td>{{ item.date ? item.date.format('Y-m-d H:i:s') : '' }}</td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="7">No records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="navigation">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
